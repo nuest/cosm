@@ -22,3 +22,25 @@ feedUrl <- function(feed, format) {
 datastreamUrl <- function(feed, datastream) {
 	sprintf('%s/datastreams/%s', feedUrl(feed), datastream)
 }
+
+#' feedsUrl
+#'
+#' Construct the URL for a list of feeds
+#' 
+#' 
+#' @param parameters	a named list of query parameters
+#'
+feedsUrl <- function(parameters) {
+#	query <- ""
+#	
+#	# TODO this must be possible more elegantly
+#	.paramNames <- names(parameters)
+#	print(.paramNames)
+#	for (i in seq(along = parameters)) {
+#		query <- paste0(query, .paramNames[i], "=", parameters[i], "&")
+#	}
+	
+#	.url <- sprintf('http://api.cosm.com/v2/feeds?%s', query)
+	.url <- 'http://api.cosm.com/v2/feeds?'
+	return(.url)
+}
